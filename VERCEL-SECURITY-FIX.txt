@@ -1,0 +1,12 @@
+LEADTIME UI + VERCEL SECURITY FIX
+
+Changes:
+- Main/login theme: pastel purple.
+- Barcode/QR payload text marked for removal is hidden from UI; barcode functionality remains.
+- @tanstack/react-start pinned to 1.168.60 (patched).
+- @tanstack/start-server-core forced to 1.169.39 (patched).
+- Stale package-lock.json removed so Vercel/npm creates a fresh lockfile using the patched versions.
+- apps-script/Code.gs was not changed.
+
+Build/deploy note:
+Vercel should install dependencies fresh. Do not restore the old package-lock.json.
